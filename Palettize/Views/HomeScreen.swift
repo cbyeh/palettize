@@ -55,7 +55,16 @@ struct UploadButton: View {
         Button(action: {
             self.setUploaded = true
         }) {
-            Image(systemName: "square.and.arrow.up")
+            HStack {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.title)
+                Text("Upload Image")
+                    .font(.title)
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.green, Color.blue]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(30)
         }
     }
 }
